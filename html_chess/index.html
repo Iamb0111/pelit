@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grandmaster Chess HTML</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Load chess.js library for chess logic -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- Main Menu -->
+        <div id="menu" class="screen">
+            <h1 class="title">CHESS</h1>
+            <p class="subtitle">Select AI Difficulty</p>
+            <div class="menu-buttons">
+                <button id="btn-easy" class="btn btn-green">Casual</button>
+                <button id="btn-normal" class="btn btn-gold">Advanced</button>
+            </div>
+            <p class="info">Click a button to start playing as White.</p>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-ui" class="screen hidden">
+            <div id="top-bar">
+                <div class="status-box">
+                    <span id="turn-indicator">Your Turn</span>
+                </div>
+                <div class="timer-box">
+                    <span id="timer">00:00</span>
+                </div>
+            </div>
+            
+            <div class="canvas-container">
+                <canvas id="chessCanvas" width="800" height="800"></canvas>
+                
+                <!-- Game Over Overlay -->
+                <div id="game-over" class="overlay hidden">
+                    <h2 id="go-text">Game Over</h2>
+                    <button id="btn-restart" class="btn btn-gray">Back to Menu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
